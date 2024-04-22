@@ -1,7 +1,7 @@
 from flask import Blueprint, redirect, render_template, request, send_from_directory, jsonify, flash
 from App.models import db
 from App.models import Internship
-from App.controllers import create_user
+from App.controllers import ( create_user, create_admin )
 from App.controllers import create_project
 from App.controllers import initialize_internship
 
@@ -25,6 +25,7 @@ def init():
   db.drop_all()
   db.create_all()
   initialize_internship()
+  create_admin('1111','admin','adminpass')
   create_user('bob', 'bobpass')
   return jsonify(message='db initialized!')
 
