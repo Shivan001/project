@@ -3,6 +3,7 @@ from App.models import db
 from App.models import Internship
 from App.controllers import create_user
 from App.controllers import create_project
+from App.controllers import initialize_internship
 
 index_views = Blueprint('index_views', __name__, template_folder='../templates')
 
