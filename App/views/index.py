@@ -24,6 +24,7 @@ def init():
   db.drop_all()
   db.create_all()
   create_user('bob', 'bobpass')
+  initialize_internship()
   return jsonify(message='db initialized!')
 
 @index_views.route('/company', methods=['GET'])
