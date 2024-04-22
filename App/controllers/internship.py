@@ -4,7 +4,7 @@ import csv
 
 
 def initialize_internship():  
-  with open('/static/internship.csv', 'r') as file:
+  with open('App/static/internship.csv', 'r') as file:
     csv_reader = csv.reader(file)
     next(csv_reader) 
     for row in csv_reader:
